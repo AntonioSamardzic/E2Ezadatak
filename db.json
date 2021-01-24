@@ -1,0 +1,102 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "picture": "https://res.cloudinary.com/practicaldev/image/fetch/s--_HBZhuhF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/nweeqf97l2md3tlqkjyt.jpg",
+      "name": "Ivan",
+      "surname": "Ivić",
+      "gender": "M",
+      "DOB": "1998.",
+      "start": "01.02.2021",
+      "contractType": "neodređeno",
+      "contractTime": "neodređeno",
+      "department": "Software-Developer"
+    },
+    {
+      "id": 2,
+      "picture": "https://miro.medium.com/max/756/1*7_7CBrZwxTY12CxWPYH-Zw.png",
+      "name": "Marino",
+      "surname": "Marić",
+      "gender": "M",
+      "DOB": "1991.",
+      "start": "11.02.2019",
+      "contractType": "određeno",
+      "contractTime": "6 mths",
+      "department": "QA Engeenier"
+    },
+    {
+      "id": 3,
+      "picture": "https://www.developer2hire.com/assets/uploads/hire-backend-developer.jpg",
+      "name": "Luka",
+      "surname": "Lukić",
+      "gender": "M",
+      "DOB": "1989.",
+      "start": "22.04.2002",
+      "contractType": "neodređeno",
+      "contractTime": "neodređeno",
+      "department": "Back End Developer"
+    },
+    {
+      "id": 4,
+      "picture": "https://www.playground.it/assets/og/playground-frontend-developer.jpg",
+      "name": "Ana",
+      "surname": "Novak",
+      "gender": "Ž",
+      "DOB": "1998.",
+      "start": "05.12.2018",
+      "contractType": "određeno",
+      "contractTime": "5 godina",
+      "department": "Front End Developer"
+    },
+    {
+      "id": 5,
+      "picture": "https://webitfactory.io/wp-content/uploads/2019/11/ui-ux.png",
+      "name": "Matija",
+      "surname": "Matić",
+      "gender": "M",
+      "DOB": "1995.",
+      "start": "17.08.2017",
+      "contractType": "određeno",
+      "contractTime": "1 godina",
+      "department": "UI/UX Designer"
+    },
+    {
+      "name": "Marko",
+      "surname": "Mamić",
+      "gender": "M",
+      "DOB": "1978",
+      "start": "19.07.2002",
+      "contractType": "neodređeno",
+      "contractTime": "neodređeno",
+      "department": "UX",
+      "picture": "https://www.openxcell.com/wp-content/uploads/2020/02/ui-ux-design-1466681938.jpg",
+      "id": 6
+    }
+  ],
+  "dani": [
+    {
+      "a": "14",
+      "b": "12",
+      "c": "11",
+      "id": 1
+    },
+    {
+      "a": "15",
+      "b": "12",
+      "c": "11",
+      "id": 2
+    },
+    {
+      "a": "2",
+      "b": "3",
+      "c": "89",
+      "id": 3
+    },
+    {
+      "a": "14",
+      "b": "2",
+      "c": "1",
+      "id": 4
+    }
+  ]
+}
