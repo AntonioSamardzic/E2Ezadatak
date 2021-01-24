@@ -50,20 +50,14 @@ function ShowTable() {
     });
   }, []);
 
-  useEffect((e) => {
+  const DodajContent = (e) => {
+    ModalContent(e);
     axios.get(`http://localhost:3004/dani/${e}`).then((res) => {
       setModalDodajInfo(res.data);
-      console.log('danie', res);
-    });
-  }, []);
 
-  // const DodajContent = (e) => {
-  //   axios.get(`http://localhost:3004/dani/${e}`).then((res) => {
-  //     setModalDodajInfo(res.data);
-  //     ModalContent(e);
-  //     console.log('modal data', res.data);
-  //   });
-  // };
+      console.log('modal data', res.data);
+    });
+  };
 
   const ModalContent = (e) => {
     axios.get(`http://localhost:3004/posts/${e}`).then((res) => {
@@ -72,9 +66,8 @@ function ShowTable() {
     });
   };
 
-  const postDodajInfo = (e) => {
-    axios.post(`http://localhost:3004/dani${e}`, modalDodajInfo).then((res) => {
-      setModalDodajInfo(res.data);
+  const postDodajInfo = () => {
+    axios.post(`http://localhost:3004/dani`, modalDodajInfo).then((res) => {
       console.log('tu', res);
       window.location.reload(true);
     });
@@ -85,6 +78,20 @@ function ShowTable() {
       console.log('user', res);
       window.location.reload(true);
     });
+  };
+
+  const handleDelete = (e) => {
+    axios.delete(`http://localhost:3004/posts/${e}`).then((res) => {
+      console.log('danie', res);
+      handleDeleteAll(e);
+      window.location.reload();
+    }, []);
+  };
+
+  const handleDeleteAll = (e) => {
+    axios.delete(`http://localhost:3004/dani/${e}`).then((res) => {
+      console.log('danie', res);
+    }, []);
   };
 
   return (
@@ -103,9 +110,9 @@ function ShowTable() {
             <ListGroupItem>{modalInfo.start}</ListGroupItem>
             <ListGroupItem>{modalInfo.contractType}.</ListGroupItem>
             <ListGroupItem>{modalInfo.contractTime}.</ListGroupItem>
-            {/* <ListGroupItem>{modalDodajInfo.a}.</ListGroupItem>
+            <ListGroupItem>{modalDodajInfo.a}.</ListGroupItem>
             <ListGroupItem>{modalDodajInfo.b}.</ListGroupItem>
-            <ListGroupItem>{modalDodajInfo.c}.</ListGroupItem> */}
+            <ListGroupItem>{modalDodajInfo.c}.</ListGroupItem>
           </ListGroup>
           <Card.Body>
             <Button className='button' onClick={() => setOpenModal(false)}>
@@ -165,7 +172,7 @@ function ShowTable() {
           variant='outline-success'
           className='button'
           type='submit'
-          onClick={() => postDodajInfo(modalDodajInfo.id)}>
+          onClick={() => postDodajInfo()}>
           Dodaj dane
         </Button>
       </Modal>
@@ -269,6 +276,7 @@ function ShowTable() {
             <th>PREZIME</th>
             <th>SLIKA</th>
             <th>DETALJI</th>
+            <th>BRISANJE ZAPOSLENIKA</th>
           </tr>
         </thead>
         <tbody>
@@ -287,11 +295,20 @@ function ShowTable() {
               </th>
               <th>
                 <Button
-                  onMouseDown={() => ModalContent(data.id)}
-                  // onMouseDown={() => DodajContent(data.id)}
+                  onMouseDown={() => DodajContent(data.id)}
                   onMouseUp={() => setOpenModal(true)}>
                   {' '}
                   Prikaži Detalje
+                </Button>
+              </th>
+              <th>
+                <Button
+                  size='md'
+                  variant='outline-danger'
+                  className='button-delete'
+                  onClick={() => handleDelete(data.id)}>
+                  {' '}
+                  Izbriši
                 </Button>
               </th>
             </tr>
@@ -302,7 +319,7 @@ function ShowTable() {
             variant='outline-primary'
             onClick={() => setOpenAddUser(true)}
             className='button'>
-            DODAJ KORISNIKA
+            DODAJ ZAPOSLENIKA
           </Button>
         </div>
       </Table>

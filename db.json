@@ -71,32 +71,98 @@
       "department": "UX",
       "picture": "https://www.openxcell.com/wp-content/uploads/2020/02/ui-ux-design-1466681938.jpg",
       "id": 6
+    },
+    {
+      "name": "Antonio",
+      "surname": "Samardzic",
+      "gender": "M",
+      "DOB": "1998",
+      "start": "01.02.2021.",
+      "contractType": "određeno",
+      "contractTime": "1 godina",
+      "department": "Developer",
+      "picture": "ee",
+      "id": 7
+    },
+    {
+      "name": "Marko",
+      "surname": "Mamić",
+      "gender": "M",
+      "DOB": "1978",
+      "start": "19.07.2002",
+      "contractType": "neodređeno",
+      "contractTime": "neodređeno",
+      "department": "UX",
+      "picture": "https://www.openxcell.com/wp-content/uploads/2020/02/ui-ux-design-1466681938.jpg",
+      "id": 8
+    },
+    {
+      "name": "Ivan",
+      "surname": "Lozić",
+      "gender": "M",
+      "DOB": "1978",
+      "start": "19.07.2002",
+      "contractType": "Određeno",
+      "contractTime": "2 mjeseca",
+      "department": "Node.js",
+      "picture": "https://www.openxcell.com/wp-content/uploads/2020/02/ui-ux-design-1466681938.jpg",
+      "id": 9
     }
   ],
   "dani": [
     {
-      "a": "14",
-      "b": "12",
-      "c": "11",
+      "a": "1",
+      "b": "1",
+      "c": "1",
       "id": 1
     },
     {
-      "a": "15",
-      "b": "12",
-      "c": "11",
+      "a": "12",
+      "b": "1",
+      "c": "1",
       "id": 2
     },
     {
-      "a": "2",
-      "b": "3",
-      "c": "89",
+      "a": "13",
+      "b": "1",
+      "c": "1",
       "id": 3
     },
     {
       "a": "14",
-      "b": "2",
+      "b": "1",
       "c": "1",
       "id": 4
+    },
+    {
+      "a": "15",
+      "b": "1",
+      "c": "1",
+      "id": 5
+    },
+    {
+      "a": "16",
+      "b": "1",
+      "c": "1",
+      "id": 6
+    },
+    {
+      "a": "17",
+      "b": "1",
+      "c": "1",
+      "id": 7
+    },
+    {
+      "a": "18",
+      "b": "1",
+      "c": "1",
+      "id": 8
+    },
+    {
+      "a": "19",
+      "b": "0",
+      "c": "0",
+      "id": 9
     }
   ]
 }
